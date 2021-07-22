@@ -1,0 +1,23 @@
+{
+  "name": "cssexamples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kritika155/CSSExamples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kritika155/CSSExamples/issues"
+  },
+  "homepage": "https://github.com/kritika155/CSSExamples#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

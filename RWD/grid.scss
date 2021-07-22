@@ -1,0 +1,147 @@
+$brand-color: #2f28e3;
+
+// * and .list-unstyled here due to cascade
+* {
+  box-sizing: border-box;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --grid-min: 20ch;
+  --flex-min: 35rem;
+  --pancake-min: var(--grid-min);
+}
+
+// Grid solution
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min), 1fr));
+
+  li {
+    outline-color: green;
+  }
+}
+
+// Flex solution #1
+// "Flexbox Albatross"
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem -0.5rem;
+
+  > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--flex-min) - 100%) * 999);
+    margin: 0.5rem;
+
+    &.flex--auto {
+      flex: 0 1 auto;
+    }
+  }
+}
+
+// Flex Solution #2
+// "Deconstructed Pancake"
+.flex-pancake {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem -0.5rem;
+
+  > * {
+    flex: 1 1 var(--pancake-min);
+    margin: 0.5rem;
+    
+    &.flex--auto {
+      flex: 0 1 auto;
+    }
+  }
+
+  li {
+    outline-color: purple;
+  }
+}
+
+// Demo styles
+body {
+  min-height: 100vh;
+  font-family: "Baloo 2", sans-serif;
+  display: grid;
+  grid-template-areas:
+    "nav header"
+    "nav main";
+  grid-template-columns: minmax(auto, 12ch) minmax(40ch, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+header {
+  grid-area: header;
+  background-color: $brand-color;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav {
+  grid-area: nav;
+  padding: 1rem;
+
+  > ul {
+    li {
+      display: flex;
+      align-items: center;
+      margin: 0.25rem 0;
+      padding: 0.25rem 0;
+      min-height: 44px;
+
+      a {
+        display: block;
+        width: 100%;
+        color: $brand-color;
+        text-decoration: none;
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+
+      + li {
+        border-top: 1px solid scale-color($brand-color, $lightness: 80%);
+      }
+    }
+  }
+}
+
+main {
+  grid-area: main;
+  background: #f9f9f9;
+  padding: 3rem 1rem;
+}
+
+.site-id {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  outline: 1px solid red;
+  min-height: 20vh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

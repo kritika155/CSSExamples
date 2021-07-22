@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>grid</title>
+        <link rel="stylesheet" href="css/styles.css">
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Dashboard</h1>
+          </header>
+          <nav>
+            <span class="site-id">ACME Corp</span>
+            <ul class="list-unstyled">
+              <li><a href="javascript:;">Nav A</a></li>
+              <li><a href="javascript:;">Nav B</a></li>
+              <li><a href="javascript:;">Nav C</a></li>
+            </ul>
+          </nav>
+          <main>
+            <ul class="list-unstyled grid">
+              <li class="card grid" style="--grid-min: 15ch;">
+                <p>Jujubes soufflé cake tootsie roll sesame snaps cheesecake bonbon. </p>
+                <p>Halvah bear claw cheesecake. Icing lemon drops chupa chups pudding tiramisu.</p>
+              </li>
+              <li class="card"></li>
+              <li class="card"></li>
+            </ul>
+          
+            <ul class="list-unstyled flex">
+          
+              <li class="card">
+                <div class="flex" style="--flex-min: 18rem;">
+                  <p>Jujubes soufflé cake tootsie roll sesame snaps cheesecake bonbon. </p>
+                  <p>Halvah bear claw cheesecake. Icing lemon drops chupa chups pudding tiramisu.</p>
+                </div>
+              </li>
+              <li class="card">
+                <h3>Using `.flex--auto` on titles</h3>
+                <ul class="list-unstyled" style="--flex-min: 8rem;">
+                  <li class="flex"><strong class="flex--auto">Ice Cream</strong> <span>Butter Pecan</span></li>
+                  <li class="flex"><strong class="flex--auto">Musical Artist</strong> <span>Justin Timberlake</span></li>
+                  <li class="flex"><strong class="flex--auto">Painter</strong> <span>Vincent Van Gogh</span></li>
+                </ul>
+              </li>
+              <li class="card" style="--flex-min: 40rem;">
+                <h3 class="flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false" class="icon flex--auto">
+                    <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+                  </svg>
+                  <span style="--flex-min: 15rem;">
+                    Card Header Of A Longish Nature
+                  </span>
+                </h3>
+                <ul class="list-unstyled" style="--flex-min: 15rem;">
+                  <li class="flex"><strong>Ice Cream</strong> <span>Butter Pecan</span></li>
+                  <li class="flex"><strong>Musical Artist</strong> <span>Justin Timberlake</span></li>
+                  <li class="flex"><strong>Painter</strong> <span>Vincent Van Gogh</span></li>
+                </ul>
+              </li>
+            </ul>
+          
+            <ul class="list-unstyled flex-pancake">
+              <li class="card">
+                <div class="flex-pancake" style="--pancake-min: 15ch;">
+                  <p>Jujubes soufflé cake tootsie roll sesame snaps cheesecake bonbon. </p>
+                  <p>Halvah bear claw cheesecake. Icing lemon drops chupa chups pudding tiramisu.</p>
+                </div>
+              </li>
+              <li class="card">
+                <h3>Using `.flex--auto` on titles</h3>
+                <ul class="list-unstyled" style="--pancake-min: 8ch;">
+                  <li class="flex-pancake"><strong class="flex--auto">Ice Cream</strong> <span>Butter Pecan</span></li>
+                  <li class="flex-pancake"><strong class="flex--auto">Musical Artist</strong> <span>Justin Timberlake</span></li>
+                  <li class="flex-pancake"><strong class="flex--auto">Painter</strong> <span>Vincent Van Gogh</span></li>
+                </ul>
+              </li>
+              <li class="card">
+                <h3 class="flex-pancake">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false" class="icon flex--auto">
+                    <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+                  </svg>
+                  <span style="--pancake-min: 15ch;">
+                    Card Header Of A Longish Nature
+                  </span>
+                </h3>
+                <ul class="list-unstyled" style="--pancake-min: 11ch;">
+                  <li class="flex-pancake"><strong>Ice Cream</strong> <span>Butter Pecan</span></li>
+                  <li class="flex-pancake"><strong>Musical Artist</strong> <span>Justin Timberlake</span></li>
+                  <li class="flex-pancake"><strong>Painter</strong> <span>Vincent Van Gogh</span></li>
+                </ul>
+              </li>
+            </ul>
+          </main>
+    </body>
+</html>
